@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "hdr-ph"
+name = "prismatica"
 version = "0.1.0"
-description = ""
+description = "A FastAPI project with HTMX to explore and view HDR images in AVIF format"
 authors = ["Mehran Moghtadai <mehran@outlook.com>"]
 readme = "README.md"
 
