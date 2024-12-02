@@ -66,13 +66,15 @@ poetry run uvicorn main:app --reload
 ### Build the Docker image:
 
 ```sh
-docker build -t prismatica-app .
+sudo docker build -t prismatica-app .
+sudo docker tag prismatica-app mehranmo/prismatica:latest
+sudo docker push mehranmo/prismatica:latest
 ```
 
 ### Run the Docker container:
 
 ```sh
-docker run -d -p 8000:8000 --name prismatica-container prismatica-app
+sudo docker run -d -p 8000:8000 --name prismatica-container prismatica-app
 ```
 
 ### Verify the application is running:
