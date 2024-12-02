@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVIF Image Viewer with HTMX</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://unpkg.com/htmx.org@1.6.1"></script>
+</head>
+<body>
+    <h1>AVIF Image Viewer</h1>
+    <div id="image-list">
+        <ul>
+            {% for image in images %}
+                <li>
+                    <a href="/view/{{ image }}" hx-get="/view/{{ image }}" hx-target="#image-container" hx-swap="innerHTML">{{ image }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div id="image-container">
+        <p>Select an image to view</p>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
